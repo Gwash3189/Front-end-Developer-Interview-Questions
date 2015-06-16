@@ -42,16 +42,40 @@
 * Describe how you would create a simple slideshow page.
 * If you could master one technology this year, what would it be?
 * Explain the importance of standards and standards bodies.
+  * Standards bodies 
+    * do the work the rest of us can't do. They take seamingly trivial items (var, let) and discuss the semeantics, the impacts and implecations of implemeting something into a language. 
+  * Standards
+    * Standards exist in an effort to unify the way web development is done. However, such standards have netoriously not been followed by major browser vendors (Microsoft). Regardless of this, standards serve as a benchmark for each browser to follow, and as assuances for web developers.
 * What is Flash of Unstyled Content? How do you avoid FOUC?
+  * A FOUC is when uncompiled / unloaded  or otherwise 'not ready' content is shown to the user before it is ready. 
+  * To midigate this, complication steps can be done before run time (handlebars, JSX) to increase performance 
+  * spinners / loading spinners could be used inplace while content is being assembled. 
+  * Alternitvly, content could be loaded in a 'progressive enhancement' type of way. Ensure that the most important content (text of a blog post) is made available instantly, and secondary content (ads, comments) are loaded in async. 
 * Explain what ARIA and screenreaders are, and how to make a website accessible.
+  * complex peices of software that read a html and interperite their markup so vision impared users can access web content. 
+  * ARIA tags on html elements assist screen readers in creating additional content and intent for the existing html
 * Explain some of the pros and cons for CSS animations versus JavaScript animations.
+  * JS animation
+    * Fine grain control over speed, distance and how it's down
+    * Performed on the CPU. The CPU isn't very good at graphical calculations
+  * CSS Animation
+    * Less control over the fine grained details, however you still have control over the easing and type of animation that is performed. 
+    * Animation is performed on the GPU, which is much better at these types of calculations 
 * What does CORS stand for and what issue does it address?
+  * Cross Origin Resource Sharing
+    * It addresses the issue of sharing content (static or otherwise) across domains (origins).
+    * A REST API that sits at foo.com/api, and a website that sits at foo.com have the same origin (foo.com)
+    * however a website that sits at bar.com has a different origin, and when a request from bar.com is made to foo.com/api it will receive a 'CORS' error, where the remote API does not accept request from differnet origins
 
 #### HTML Questions:
 
 * What does a `doctype` do?
 * What's the difference between standards mode and quirks mode?
 * What's the difference between HTML and XHTML?
+  * HTML
+    * Is less fussy and allows for incomplete tags
+  * XHTML
+    * More fussy and requires a extended doc type
 * Are there any problems with serving pages as `application/xhtml+xml`?
 * How do you serve a page with content in multiple languages?
 * What kind of things must you be wary of when design or developing for multilingual sites?
